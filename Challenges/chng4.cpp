@@ -70,6 +70,15 @@ string makeString (string label, double value, char separator)
 char stringToChar (string value)
 {
 	// CODE HERE
+	
+	if (value.length() == 0 || value.length () > 1)
+	{
+	    return '\0';
+	}
+	else
+	{
+	    return value[0];
+	}
 }
 
 /*
@@ -107,6 +116,20 @@ int stringToInt (string value)
 double stringToDouble (string value)
 {
 	// CODE HERE
+	
+	double dvalue = 0;
+	stringstream converter(value);
+	converter.exceptions(ios_base::failbit);
+	
+	try
+	{
+	    converter >> dvalue;
+	}
+	catch (ios_base::failure f)
+	{
+	    
+	}
+	return dvalue;
 }
 
 /*
@@ -123,6 +146,19 @@ double stringToDouble (string value)
 bool stringToBool (string value)
 {
 	// CODE HERE
+	
+	char x = value[0];
+	
+	x = tolower (x);
+	
+	if(x == 't')
+	{
+	    return true;
+	}
+	else
+	{
+	    return false;
+	}
 }
 
 /*
