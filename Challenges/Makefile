@@ -7,9 +7,11 @@
 
 # Target for programming challenge 3
 # Date completed: 2-3-2014
-# Date updated: 2-5-2014
+# Date updated: 2-10-2014
 
-all: challenge-1 challenge-2 challenge-3 challenge-4
+FLAGS = Wall -Wextra -Werror -pedantic
+
+all: challenge-1 challenge-2 challenge-3 challenge-4 challenge-5
 
 challenge-1: chng1.cpp
 	g++ -o chng1 chng1.cpp
@@ -22,3 +24,8 @@ challenge-3: chng3.cpp
 
 challenge-4: chng4.cpp
 	g++ -o chng4 chng4.cpp
+
+pc5: Challenge5/chng5
+
+Challenge5/chng5: Challenge5/chng5.cpp
+	g++ -o Challenge5/chng5 Challenge5/chng5.cpp
