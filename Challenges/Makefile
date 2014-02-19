@@ -7,35 +7,57 @@
 
 # Target for programming challenge 3
 # Date completed: 2-3-2014
-# Date updated: 2-11-2014
+# Date updated: 2-19-2014
 
-FLAGS = Wall -Wextra -Werror -pedantic
+FLAGS = -Wall -Wextra -Werror -pedantic
 
-all: challenge-1 challenge-2 challenge-3 challenge-4 challenge-5
-
-challenge-1: chng1.cpp
-	g++ -o chng1 chng1.cpp
+all: pc7 pc6 pc5 pc4 pc3 pc2 pc1
 
 
-challenge-2: chng2.cpp
-	g++ -o chng2 chng2.cpp
+pc7: Challenge7/chng7
 
-
-challenge-3: chng3.cpp
-	g++ -o chng3 chng3.cpp
-
-
-challenge-4: chng4.cpp
-	g++ -o chng4 chng4.cpp
-
-
-pc5: Challenge5/chng5
-
-Challenge5/chng5: Challenge5/chng5.cpp
-	g++ -o Challenge5/chng5 Challenge5/chng5.cpp
+Challenge7/chng7: Challenge7/chng7.cpp
+	g++ $(FLAGS) -o Challenge7/chng7 Challenge7/chng7.cpp
 
 
 pc6: Challenge6/chng6
 
 Challenge6/chng6: Challenge6/chng6.cpp
-	g++ -o Challenge6/chng6 Challenge6/chng6.cpp
+	g++ $(FLAGS) -o Challenge6/chng6 Challenge6/chng6.cpp
+
+
+pc5: Challenge5/chng5
+
+Challenge5/chng5: Challenge5/chng5.cpp
+	g++ $(FLAGS) -o Challenge5/chng5 Challenge5/chng5.cpp
+
+
+pc4: Challenge4/chng4
+
+Challenge4/chng4: Challenge4/chng4.cpp
+	g++ $(FLAGS) -o Challenge4/chng4 Challenge4/chng4.cpp
+
+
+pc3: Challenge3/chng3
+
+Challenge3/chng3: Challenge3/chng3.cpp
+	g++ $(FLAGS) -o Challenge3/chng3 Challenge3/chng3.cpp
+
+
+pc2: Challenge2/chng2
+
+Challenge2/chng2: Challenge2/chng2.cpp
+	g++ $(FLAGS) -o Challenge2/chng2 Challenge2/chng2.cpp
+
+
+pc1: Challenge1/chng1
+
+Challenge1/chng1: Challenge1/chng1.cpp
+	g++ $(FLAGS) -o Challenge1/chng1 Challenge1/chng1.cpp
+
+
+
+
+
+
+
