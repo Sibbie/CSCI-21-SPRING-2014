@@ -89,7 +89,6 @@ string upAndDown (string theString)
 
 //=======
 
-//could not get this to work.
 
 int countWords (string theString)
 {
