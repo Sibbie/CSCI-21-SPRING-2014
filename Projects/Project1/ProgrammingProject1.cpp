@@ -29,7 +29,7 @@ template <typename X, typename A>
 void btassert(A assertion);
 void unittest ();
 
-int main (int argc, char* argv[])
+int main ()
 {
 	unittest();
 	
@@ -52,7 +52,7 @@ void countCharacters (string theString, int& alpha, int& num)
 	alpha = 0;
 	num = 0;
 	
-	for (int i = 0; i < theString.length(); i++)
+	for (unsigned int i = 0; i < theString.length(); i++)
 	{
 		if ( isalpha(theString[i]))
 		{
@@ -75,11 +75,11 @@ void countCharacters (string theString, int& alpha, int& num)
 
 string upAndDown (string theString)
 {
-	for(int i=0; i <theString.length(); i=i+2)
+	for(unsigned int i=0; i < theString.length(); i=i+2)
 	{
 		theString[i] = toupper (theString[i]);
 	}
-	for(int i=1; i <theString.length(); i=i+2)
+	for(unsigned int i=1; i < theString.length(); i=i+2)
 	{
 		theString[i] = tolower (theString[i]);
 	}
@@ -94,7 +94,7 @@ int countWords (string theString)
 {
 	int words = 0;
 	
-	for (int i = 0; i < theString.length(); i++)
+	for (unsigned int i = 0; i < theString.length(); i++)
 	{
 		if ( isspace(theString[i]))
 		{
@@ -115,50 +115,50 @@ int countWords (string theString)
 int computeAverage (int values [], int arraySize)
 {
 	int sums = 0;
-	int aver = 0;
+	int avg = 0;
 	
 	for (int i = 0; i < arraySize; i++)
 	{
 		sums = sums + values[i];
 	}
 	
-	aver = sums/arraySize;
+	avg = sums/arraySize;
 	
-	return aver;
+	return avg;
 }
 
 //=======
 
 int findMinValue (int values [], int arraySize)
 {
-	int minE = values[0];
+	int min = values[0];
 	
 	for(int i=0; i <arraySize; i++)
 	{
-		if( values[i] < minE)
+		if( values[i] < min)
 		{
-			minE = values[i];
+			min = values[i];
 		}
 	}
 	
-	return minE;
+	return min;
 }
 
 //=======
 
 int findMaxValue (int values [], int arraySize)
 {
-	int maX = values[0];
+	int max = values[0];
 	
 	for(int i=0; i <arraySize; i++)
 	{
-		if( values[i] > maX)
+		if( values[i] > max)
 		{
-			maX = values[i];
+			max = values[i];
 		}
 	}
 	
-	return maX;
+	return max;
 }
 
 //=======
