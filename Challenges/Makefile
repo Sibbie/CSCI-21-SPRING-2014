@@ -7,11 +7,17 @@
 
 # Target for programming challenge 3
 # Date completed: 2-3-2014
-# Date updated: 3-5-2014
+# Date updated: 3-10-2014
 
 FLAGS = -Wall -Wextra -Werror -pedantic
 
-all: pc11 pc10 pc9 pc8 pc7 pc6 pc5 pc4 pc3 pc2 pc1
+all: pc12 pc11 pc10 pc9 pc8 pc7 pc6 pc5 pc4 pc3 pc2 pc1
+
+
+pc12: Challenge12/chng12
+
+Challenge12/chng12: Challenge12/chng12.cpp
+	g++ $(FLAGS) -o Challenge12/chng12 Challenge12/chng12.cpp
 
 
 pc11: Challenge11/chng11
