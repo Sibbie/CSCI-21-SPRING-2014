@@ -11,7 +11,13 @@
 
 FLAGS = -Wall -Wextra -Werror -pedantic
 
-all: pc12 pc11 pc10 pc9 pc8 pc7 pc6 pc5 pc4 pc3 pc2 pc1
+all: pc13 pc12 pc11 pc10 pc9 pc8 pc7 pc6 pc5 pc4 pc3 pc2 pc1
+
+
+pc13: Challenge13/chng13
+
+Challenge13/chng13: Challenge13/chng13.cpp
+	g++ $(FLAGS) -o Challenge13/chng13 Challenge13/chng13.cpp
 
 
 pc12: Challenge12/chng12
