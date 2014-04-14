@@ -1,10 +1,10 @@
 FLAGS = -Wall -Wextra -Werror -pedantic -Wno-newline-eof
 
-pc18: pc18.o SLNode.o SList.o
-	g++ $(FLAGS) -o pc18 pc18.o SLNode.o SList.o
+pc19: pc19.o SLNode.o SList.o
+	g++ $(FLAGS) -o pc19 pc19.o SLNode.o SList.o
 
-pc18.o: pc18.cpp
-	g++ -c $(FLAGS) pc18.cpp -o pc18.o
+pc19.o: pc19.cpp
+	g++ -c $(FLAGS) pc19.cpp -o pc19.o
 
 SLNode.o: SLNode.cpp
 	g++ -c $(FLAGS) SLNode.cpp -o SLNode.o
